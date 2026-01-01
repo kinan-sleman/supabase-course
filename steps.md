@@ -12,3 +12,7 @@ npm install @supabase/supabase-js
 ALTER ROLE authenticator SET pgrst.db_aggregates_enabled = 'true';
 NOTIFY pgrst, 'reload config';
 ```
+
+```json
+npm install react-charts@beta --save
+```
