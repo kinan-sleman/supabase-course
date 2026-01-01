@@ -7,3 +7,8 @@
 ```json
 npm install @supabase/supabase-js
 ```
+### Run this command below in supabase SQL Editor to allow postgreSQL aggregates: 
+```json
+ALTER ROLE authenticator SET pgrst.db_aggregates_enabled = 'true';
+NOTIFY pgrst, 'reload config';
+```

@@ -6,9 +6,7 @@ const Dashboard: React.FC = () => {
         const fetchMetrics = async () => {
             const { data, error } = await supabase
                 .from("sales_deals")
-                .select("name, value")
-                .order("value", { ascending: false })
-                .limit(1);
+                .select(`name, value.sum()`)
 
             if (error) {
                 console.error(error);
