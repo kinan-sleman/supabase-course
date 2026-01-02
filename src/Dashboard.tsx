@@ -43,6 +43,18 @@ const Dashboard: React.FC = () => {
             setMetrics(result);
         };
         fetchMetrics();
+        const channel = supabase.channel('deal-changes').on('postgres_changes', {
+            event: "*",
+            schema: "public",
+            table: "sales_deals",
+        }, (payload) => {
+            console.log({ payload });
+            fetchMetrics()
+        })
+        .subscribe()
+        return () => {
+            supabase.removeChannel(channel)
+        }
     }, []);
 
     const yMax = useMemo(() => {

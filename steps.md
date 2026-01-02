@@ -16,3 +16,8 @@ NOTIFY pgrst, 'reload config';
 ```json
 npm install react-charts@beta --save
 ```
+### create new channel, to listen for all types of event (e.g INSERT, UPDATE AND DELETE) and table name
+### add the schema (Hint: Check your your Supabase Table Editor) and table name.
+### Log the 'new' property of the 'payload' object to the console and save (ctrl + s)
+### Navigate to your Supabase table and insert new row.
+43:29
