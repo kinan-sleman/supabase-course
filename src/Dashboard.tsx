@@ -5,6 +5,7 @@ import {
     type AxisOptions,
     type ChartOptions,
 } from "react-charts";
+import Form from "./Form";
 
 type DealRow = {
     name: string;
@@ -114,6 +115,7 @@ const Dashboard: React.FC = () => {
                 <div style={{ height: 400 }}>
                     <Chart options={options} />
                 </div>
+                <Form metrics={metrics}/>
             </div>
         </div>
     );

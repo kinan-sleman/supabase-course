@@ -20,4 +20,4 @@ npm install react-charts@beta --save
 ### add the schema (Hint: Check your your Supabase Table Editor) and table name.
 ### Log the 'new' property of the 'payload' object to the console and save (ctrl + s)
 ### Navigate to your Supabase table and insert new row.
-43:29
+47:56
