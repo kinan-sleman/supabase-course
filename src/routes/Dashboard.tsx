@@ -1,11 +1,11 @@
 import { useEffect, useMemo, useState } from "react";
-import supabase from "./supabase-client";
+import supabase from "../supabase-client";
 import {
     Chart,
     type AxisOptions,
     type ChartOptions,
 } from "react-charts";
-import Form from "./Form";
+import Form from "../components/Form";
 
 type DealRow = {
     name: string;
@@ -52,7 +52,7 @@ const Dashboard: React.FC = () => {
             console.log({ payload });
             fetchMetrics()
         })
-        .subscribe()
+            .subscribe()
         return () => {
             supabase.removeChannel(channel)
         }
@@ -115,7 +115,7 @@ const Dashboard: React.FC = () => {
                 <div style={{ height: 400 }}>
                     <Chart options={options} />
                 </div>
-                <Form metrics={metrics}/>
+                <Form metrics={metrics} />
             </div>
         </div>
     );

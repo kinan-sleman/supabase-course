@@ -1,5 +1,5 @@
 import { useActionState } from "react";
-import supabase from "./supabase-client";
+import supabase from "../supabase-client";
 
 type ActionState =
     | { error?: string; success?: boolean }
